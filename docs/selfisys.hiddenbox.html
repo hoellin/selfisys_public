@@ -1,0 +1,562 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hiddenbox &mdash; SelfiSys /Users/hoellinger/Library/CloudStorage/Dropbox/travail/these/science/code/SELFI/selfisys/src/ documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=75025241"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="normalise_hb" href="selfisys.normalise_hb.html" />
+    <link rel="prev" title="SelfiSys: Assess the Impact of Systematic Effects in Galaxy Surveys" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SelfiSys
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">hiddenbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox"><code class="docutils literal notranslate"><span class="pre">HiddenBox</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.Npop"><code class="docutils literal notranslate"><span class="pre">HiddenBox.Npop</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.Ntimesteps"><code class="docutils literal notranslate"><span class="pre">HiddenBox.Ntimesteps</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.Psingle"><code class="docutils literal notranslate"><span class="pre">HiddenBox.Psingle</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.compute_pool"><code class="docutils literal notranslate"><span class="pre">HiddenBox.compute_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.evaluate"><code class="docutils literal notranslate"><span class="pre">HiddenBox.evaluate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.force_neglect_lightcone"><code class="docutils literal notranslate"><span class="pre">HiddenBox.force_neglect_lightcone</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.force_recompute_mocks"><code class="docutils literal notranslate"><span class="pre">HiddenBox.force_recompute_mocks</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.gravity_on"><code class="docutils literal notranslate"><span class="pre">HiddenBox.gravity_on</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.load_pool"><code class="docutils literal notranslate"><span class="pre">HiddenBox.load_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.make_data"><code class="docutils literal notranslate"><span class="pre">HiddenBox.make_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.modified_selfi"><code class="docutils literal notranslate"><span class="pre">HiddenBox.modified_selfi</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.prefix_mocks"><code class="docutils literal notranslate"><span class="pre">HiddenBox.prefix_mocks</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.reset_survey"><code class="docutils literal notranslate"><span class="pre">HiddenBox.reset_survey()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.setup_only"><code class="docutils literal notranslate"><span class="pre">HiddenBox.setup_only</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.switch_recompute_pool"><code class="docutils literal notranslate"><span class="pre">HiddenBox.switch_recompute_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.switch_setup"><code class="docutils literal notranslate"><span class="pre">HiddenBox.switch_setup()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selfisys.hiddenbox.HiddenBox.update"><code class="docutils literal notranslate"><span class="pre">HiddenBox.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfisys.normalise_hb.html">normalise_hb</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.normalise_hb.html#selfisys.normalise_hb.define_normalisation"><code class="docutils literal notranslate"><span class="pre">define_normalisation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.normalise_hb.html#selfisys.normalise_hb.worker_normalisation"><code class="docutils literal notranslate"><span class="pre">worker_normalisation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.normalise_hb.html#selfisys.normalise_hb.worker_normalisation_public"><code class="docutils literal notranslate"><span class="pre">worker_normalisation_public()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.normalise_hb.html#selfisys.normalise_hb.worker_normalisation_wrapper"><code class="docutils literal notranslate"><span class="pre">worker_normalisation_wrapper()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfisys.prior.html">prior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.get_summary"><code class="docutils literal notranslate"><span class="pre">get_summary()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.logposterior_hyperparameters_parallel"><code class="docutils literal notranslate"><span class="pre">logposterior_hyperparameters_parallel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.perform_prior_optimisation_and_plot"><code class="docutils literal notranslate"><span class="pre">perform_prior_optimisation_and_plot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.planck_prior"><code class="docutils literal notranslate"><span class="pre">planck_prior</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.planck_prior.mean"><code class="docutils literal notranslate"><span class="pre">planck_prior.mean</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.planck_prior.covariance"><code class="docutils literal notranslate"><span class="pre">planck_prior.covariance</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.planck_prior.inv_covariance"><code class="docutils literal notranslate"><span class="pre">planck_prior.inv_covariance</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.planck_prior.Nbin_max"><code class="docutils literal notranslate"><span class="pre">planck_prior.Nbin_max</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.planck_prior.Nbin_min"><code class="docutils literal notranslate"><span class="pre">planck_prior.Nbin_min</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.planck_prior.compute"><code class="docutils literal notranslate"><span class="pre">planck_prior.compute()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.planck_prior.load"><code class="docutils literal notranslate"><span class="pre">planck_prior.load()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.planck_prior.logpdf"><code class="docutils literal notranslate"><span class="pre">planck_prior.logpdf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.planck_prior.sample"><code class="docutils literal notranslate"><span class="pre">planck_prior.sample()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.planck_prior.save"><code class="docutils literal notranslate"><span class="pre">planck_prior.save()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.prior.html#selfisys.prior.worker_class"><code class="docutils literal notranslate"><span class="pre">worker_class()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfisys.selection_functions.html">selection_functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection"><code class="docutils literal notranslate"><span class="pre">LognormalSelection</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.init_selection"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.init_selection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.lognormals_z_to_x"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.lognormals_z_to_x()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.multiple_lognormal"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.multiple_lognormal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.multiple_lognormal_z"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.multiple_lognormal_z()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.one_lognormal"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.one_lognormal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.one_lognormal_z"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.one_lognormal_z()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.r_grid"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.r_grid()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfisys.selfi_interface.html">selfi_interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.selfi_interface.html#selfisys.selfi_interface.PrintMessage"><code class="docutils literal notranslate"><span class="pre">PrintMessage()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.selfi_interface.html#selfisys.selfi_interface.indent"><code class="docutils literal notranslate"><span class="pre">indent()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.selfi_interface.html#selfisys.selfi_interface.unindent"><code class="docutils literal notranslate"><span class="pre">unindent()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfisys.sbmy_interface.html">sbmy_interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.sbmy_interface.html#selfisys.sbmy_interface.compute_Phi"><code class="docutils literal notranslate"><span class="pre">compute_Phi()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.sbmy_interface.html#selfisys.sbmy_interface.generate_white_noise_Field"><code class="docutils literal notranslate"><span class="pre">generate_white_noise_Field()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.sbmy_interface.html#selfisys.sbmy_interface.get_power_spectrum_from_cosmo"><code class="docutils literal notranslate"><span class="pre">get_power_spectrum_from_cosmo()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.sbmy_interface.html#selfisys.sbmy_interface.handle_time_stepping"><code class="docutils literal notranslate"><span class="pre">handle_time_stepping()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.sbmy_interface.html#selfisys.sbmy_interface.setup_sbmy_parfiles"><code class="docutils literal notranslate"><span class="pre">setup_sbmy_parfiles()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfisys.grf.html">grf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.grf.html#selfisys.grf.primordial_grf"><code class="docutils literal notranslate"><span class="pre">primordial_grf()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="selfisys.utils.html">selfisys.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#module-selfisys.utils.examples_utils">selfisys.utils.examples_utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.examples_utils.clear_large_plot"><code class="docutils literal notranslate"><span class="pre">clear_large_plot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#module-selfisys.utils.logger">selfisys.utils.logger module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.logger.CustomLogger"><code class="docutils literal notranslate"><span class="pre">CustomLogger</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.logger.CustomLogger.diagnostic"><code class="docutils literal notranslate"><span class="pre">CustomLogger.diagnostic()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.logger.CustomLoggerHandler"><code class="docutils literal notranslate"><span class="pre">CustomLoggerHandler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.logger.CustomLoggerHandler.emit"><code class="docutils literal notranslate"><span class="pre">CustomLoggerHandler.emit()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.logger.INDENT"><code class="docutils literal notranslate"><span class="pre">INDENT()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.logger.PrintDiagnostic"><code class="docutils literal notranslate"><span class="pre">PrintDiagnostic()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.logger.PrintError"><code class="docutils literal notranslate"><span class="pre">PrintError()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.logger.PrintInfo"><code class="docutils literal notranslate"><span class="pre">PrintInfo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.logger.PrintLeftType"><code class="docutils literal notranslate"><span class="pre">PrintLeftType()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.logger.PrintWarning"><code class="docutils literal notranslate"><span class="pre">PrintWarning()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.logger.UNINDENT"><code class="docutils literal notranslate"><span class="pre">UNINDENT()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.logger.getCustomLogger"><code class="docutils literal notranslate"><span class="pre">getCustomLogger()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#module-selfisys.utils.low_level">selfisys.utils.low_level module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.low_level.stderr_redirector"><code class="docutils literal notranslate"><span class="pre">stderr_redirector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.low_level.stdout_redirector"><code class="docutils literal notranslate"><span class="pre">stdout_redirector()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#module-selfisys.utils.parser">selfisys.utils.parser module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.parser.bool_sh"><code class="docutils literal notranslate"><span class="pre">bool_sh()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.parser.check_files_exist"><code class="docutils literal notranslate"><span class="pre">check_files_exist()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.parser.intNone"><code class="docutils literal notranslate"><span class="pre">intNone()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.parser.joinstrs"><code class="docutils literal notranslate"><span class="pre">joinstrs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.parser.joinstrs_only"><code class="docutils literal notranslate"><span class="pre">joinstrs_only()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.parser.none_or_bool_or_str"><code class="docutils literal notranslate"><span class="pre">none_or_bool_or_str()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.parser.safe_npload"><code class="docutils literal notranslate"><span class="pre">safe_npload()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#module-selfisys.utils.path_utils">selfisys.utils.path_utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.path_utils.file_names_evaluate"><code class="docutils literal notranslate"><span class="pre">file_names_evaluate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.path_utils.get_file_names"><code class="docutils literal notranslate"><span class="pre">get_file_names()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#module-selfisys.utils.plot_examples">selfisys.utils.plot_examples module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_examples.plot_comoving_distance_redshift"><code class="docutils literal notranslate"><span class="pre">plot_comoving_distance_redshift()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_examples.plot_galaxy_field_slice"><code class="docutils literal notranslate"><span class="pre">plot_galaxy_field_slice()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_examples.plot_power_spectrum"><code class="docutils literal notranslate"><span class="pre">plot_power_spectrum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_examples.plot_selection_functions_def_in_z"><code class="docutils literal notranslate"><span class="pre">plot_selection_functions_def_in_z()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_examples.redshift_distance_conversion"><code class="docutils literal notranslate"><span class="pre">redshift_distance_conversion()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_examples.relative_error_analysis"><code class="docutils literal notranslate"><span class="pre">relative_error_analysis()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#module-selfisys.utils.plot_params">selfisys.utils.plot_params module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_params.ScalarFormatterForceFormat_11"><code class="docutils literal notranslate"><span class="pre">ScalarFormatterForceFormat_11</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_params.ScalarFormatterForceFormat_11.get_offset"><code class="docutils literal notranslate"><span class="pre">ScalarFormatterForceFormat_11.get_offset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_params.ScalarFormatterForceFormat_11.set_scientific"><code class="docutils literal notranslate"><span class="pre">ScalarFormatterForceFormat_11.set_scientific()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_params.ScalarFormatterForceFormat_11.set_useOffset"><code class="docutils literal notranslate"><span class="pre">ScalarFormatterForceFormat_11.set_useOffset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_params.create_all_colormaps"><code class="docutils literal notranslate"><span class="pre">create_all_colormaps()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_params.create_colormap"><code class="docutils literal notranslate"><span class="pre">create_colormap()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_params.dynamic_text_scaling"><code class="docutils literal notranslate"><span class="pre">dynamic_text_scaling()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_params.get_contours"><code class="docutils literal notranslate"><span class="pre">get_contours()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_params.reset_plotting"><code class="docutils literal notranslate"><span class="pre">reset_plotting()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_params.setup_plotting"><code class="docutils literal notranslate"><span class="pre">setup_plotting()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#module-selfisys.utils.plot_utils">selfisys.utils.plot_utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_utils.plot_C"><code class="docutils literal notranslate"><span class="pre">plot_C()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_utils.plot_fisher"><code class="docutils literal notranslate"><span class="pre">plot_fisher()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_utils.plot_gradients"><code class="docutils literal notranslate"><span class="pre">plot_gradients()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_utils.plot_histogram"><code class="docutils literal notranslate"><span class="pre">plot_histogram()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_utils.plot_mocks"><code class="docutils literal notranslate"><span class="pre">plot_mocks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_utils.plot_mocks_compact"><code class="docutils literal notranslate"><span class="pre">plot_mocks_compact()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_utils.plot_observations"><code class="docutils literal notranslate"><span class="pre">plot_observations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_utils.plot_prior_and_posterior_covariances"><code class="docutils literal notranslate"><span class="pre">plot_prior_and_posterior_covariances()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_utils.plot_reconstruction"><code class="docutils literal notranslate"><span class="pre">plot_reconstruction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_utils.plot_selection_functions"><code class="docutils literal notranslate"><span class="pre">plot_selection_functions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.plot_utils.plotly_3d"><code class="docutils literal notranslate"><span class="pre">plotly_3d()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#module-selfisys.utils.timestepping">selfisys.utils.timestepping module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.timestepping.merge_nTS"><code class="docutils literal notranslate"><span class="pre">merge_nTS()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#module-selfisys.utils.tools">selfisys.utils.tools module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.tools.cosmo_vector_to_Simbelmyne_dict"><code class="docutils literal notranslate"><span class="pre">cosmo_vector_to_Simbelmyne_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.tools.cosmo_vector_to_class_dict"><code class="docutils literal notranslate"><span class="pre">cosmo_vector_to_class_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.tools.custom_stat"><code class="docutils literal notranslate"><span class="pre">custom_stat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.tools.fisher_rao"><code class="docutils literal notranslate"><span class="pre">fisher_rao()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.tools.get_k_max"><code class="docutils literal notranslate"><span class="pre">get_k_max()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.tools.get_summary"><code class="docutils literal notranslate"><span class="pre">get_summary()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.tools.none_or_bool_or_str"><code class="docutils literal notranslate"><span class="pre">none_or_bool_or_str()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.tools.params_ids_to_Simbelmyne_dict"><code class="docutils literal notranslate"><span class="pre">params_ids_to_Simbelmyne_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.tools.sample_omega_from_prior"><code class="docutils literal notranslate"><span class="pre">sample_omega_from_prior()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.tools.summary_to_score"><code class="docutils literal notranslate"><span class="pre">summary_to_score()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#module-selfisys.utils.workers">selfisys.utils.workers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.workers.Simbelmyne_worker"><code class="docutils literal notranslate"><span class="pre">Simbelmyne_worker()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.workers.evaluate_gradient_of_Symbelmyne"><code class="docutils literal notranslate"><span class="pre">evaluate_gradient_of_Symbelmyne()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="selfisys.utils.html#selfisys.utils.workers.worker_gradient_Symbelmyne"><code class="docutils literal notranslate"><span class="pre">worker_gradient_Symbelmyne()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="selfisys.utils.html#module-selfisys.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contribute</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing to SelfiSys</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#reporting-issues">Reporting Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#submitting-contributions">Submitting Contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#style-guidelines">Style Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CONTRIBUTING.html#python-code">Python code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CONTRIBUTING.html#jupyter-notebooks">Jupyter Notebooks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#questions">Questions?</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="REFERENCES.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SelfiSys</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">hiddenbox</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/hoellin/selfisys_public/blob/main/docs/source/selfisys.hiddenbox.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-selfisys.hiddenbox">
+<span id="hiddenbox"></span><h1>hiddenbox<a class="headerlink" href="#module-selfisys.hiddenbox" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selfisys.hiddenbox.</span></span><span class="sig-name descname"><span class="pre">HiddenBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k_s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P_ss_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Pbins_bnd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta2P</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G_sim_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G_ss_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Np0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Npm0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fsimdir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_std</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radial_selection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observed_density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linear_bias</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_csts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">survey_mask_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_mask_prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eff_redshifts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TimeSteps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TimeStepDistribution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seedphase</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seednoise</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixnoise</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seednorm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfisys/hiddenbox.html#HiddenBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents custom forward data model of large-scale
+spectroscopic galaxy surveys.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.Npop">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Npop</span></span><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.Npop" title="Link to this definition"></a></dt>
+<dd><p>Number of populations.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.Ntimesteps">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Ntimesteps</span></span><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.Ntimesteps" title="Link to this definition"></a></dt>
+<dd><p>Number of time steps.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.Psingle">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Psingle</span></span><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.Psingle" title="Link to this definition"></a></dt>
+<dd><p>Number of summary statistics for each population.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.compute_pool">
+<span class="sig-name descname"><span class="pre">compute_pool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool_fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_powerspectrum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_parfiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_sim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_sbmy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_is_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simspath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfisys/hiddenbox.html#HiddenBox.compute_pool"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.compute_pool" title="Link to this definition"></a></dt>
+<dd><p>Compute a pool of realisations of the hidden box compatible
+with <cite>pySELFI</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>ndarray</em>) – Power spectrum values at the support wavenumbers.</p></li>
+<li><p><strong>d</strong> (<em>int</em>) – Direction in parameter space, from 0 to S.</p></li>
+<li><p><strong>pool_fname</strong> (<em>str</em>) – Filename for the pool.</p></li>
+<li><p><strong>N</strong> (<em>int</em>) – Number of realisations required at the given direction.</p></li>
+<li><p><strong>index</strong> (<em>int</em><em>, </em><em>optional</em>) – Index of a single simulation to run. Default is <cite>None</cite>.</p></li>
+<li><p><strong>force_powerspectrum</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, force recomputation of the power spectrum. Default
+is <cite>False</cite>.</p></li>
+<li><p><strong>force_parfiles</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, overwrite existing parameter files. Default is
+<cite>False</cite>.</p></li>
+<li><p><strong>force_sim</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, rerun the simulation even if the output density
+already exists. Default is <cite>False</cite>.</p></li>
+<li><p><strong>remove_sbmy</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, remove Simbelmynë output files from disk. Default
+is <cite>False</cite>.</p></li>
+<li><p><strong>theta_is_p</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set to True when <cite>theta</cite> is already an unnormalised power
+spectrum. Default is <cite>False</cite>.</p></li>
+<li><p><strong>simspath</strong> (<em>str</em><em>, </em><em>optional</em>) – Path indicating where to store the simulations. Default is
+<cite>None</cite>.</p></li>
+<li><p><strong>bar</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, display a progress bar. Default is <cite>False</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>p</strong> – Simulation pool object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Pool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seedphase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seednoise</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_powerspectrum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_parfiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_sim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_sbmy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_is_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simspath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RSDs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmo_vect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfisys/hiddenbox.html#HiddenBox.evaluate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.evaluate" title="Link to this definition"></a></dt>
+<dd><p>Evaluate the hidden box for a given input power spectrum.</p>
+<p>The result is deterministic (the phase is fixed), except as it
+is modified by nuisance parameters if any.</p>
+<p>This routine is used by <cite>pySELFI</cite> to compute the gradient of the
+hidden box with respect to the power spectrum, and by ABC-PMC to
+evaluate the forward model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>ndarray</em>) – Power spectrum values at the support wavenumbers.</p></li>
+<li><p><strong>d</strong> (<em>int</em>) – Direction in parameter space, from <cite>0</cite> to <cite>S</cite>.</p></li>
+<li><p><strong>seedphase</strong> (<em>int</em><em> or </em><em>list</em><em> of </em><em>int</em>) – Seed to generate the initial white noise in Fourier space.</p></li>
+<li><p><strong>seednoise</strong> (<em>int</em><em> or </em><em>list</em><em> of </em><em>int</em>) – Seed to generate the noise realisation.</p></li>
+<li><p><strong>i</strong> (<em>int</em><em>, </em><em>optional</em>) – Current evaluation index of the hidden box. Default is <cite>0</cite>.</p></li>
+<li><p><strong>N</strong> (<em>int</em><em>, </em><em>optional</em>) – Total number of evaluations of the hidden box. Default is
+<cite>0</cite>.</p></li>
+<li><p><strong>force_powerspectrum</strong> (<em>bool</em><em>, </em><em>optional</em>) – If <cite>True</cite>, force recomputation of the power spectrum at the
+values of the Fourier grid. Default is <cite>False</cite>.</p></li>
+<li><p><strong>force_parfiles</strong> (<em>bool</em><em>, </em><em>optional</em>) – If <cite>True</cite>, overwrite existing parameter files. Default is
+<cite>False</cite>.</p></li>
+<li><p><strong>force_sim</strong> (<em>bool</em><em>, </em><em>optional</em>) – If <cite>True</cite>, rerun the simulation even if the output density
+already exists. Default is <cite>False</cite>.</p></li>
+<li><p><strong>remove_sbmy</strong> (<em>bool</em><em>, </em><em>optional</em>) – If <cite>True</cite>, remove Simbelmynë output files from disk. Default
+is <cite>False</cite>.</p></li>
+<li><p><strong>theta_is_p</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set to <cite>True</cite> if <cite>theta</cite> is already an unnormalised power
+spectrum. Default is <cite>False</cite>.</p></li>
+<li><p><strong>simspath</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to the simulations directory. Default is <cite>None</cite>.</p></li>
+<li><p><strong>check_output</strong> (<em>bool</em><em>, </em><em>optional</em>) – If <cite>True</cite>, check the integrity of the output file and
+recompute if corrupted. Default is <cite>False</cite>.</p></li>
+<li><p><strong>RSDs</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to compute redshift-space distortions. Default is
+<cite>True</cite>.</p></li>
+<li><p><strong>abc</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) – If not False, remove most output files after evaluation.
+Default is <cite>False</cite>.</p></li>
+<li><p><strong>cosmo_vect</strong> (<em>ndarray</em><em>, </em><em>optional</em>) – Cosmological parameters. Required if <cite>abc</cite> is <cite>True</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Phi</strong> – Vector of summary statistics.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.force_neglect_lightcone">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">force_neglect_lightcone</span></span><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.force_neglect_lightcone" title="Link to this definition"></a></dt>
+<dd><p>Whether to force neglecting the lightcone.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.force_recompute_mocks">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">force_recompute_mocks</span></span><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.force_recompute_mocks" title="Link to this definition"></a></dt>
+<dd><p>Whether to force recomputation of mocks.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.gravity_on">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gravity_on</span></span><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.gravity_on" title="Link to this definition"></a></dt>
+<dd><p>Whether gravity is enabled.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.load_pool">
+<span class="sig-name descname"><span class="pre">load_pool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfisys/hiddenbox.html#HiddenBox.load_pool"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.load_pool" title="Link to this definition"></a></dt>
+<dd><p>Load a pool of realisations of the hidden box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pool_fname</strong> (<em>str</em>) – Filename of the pool to load.</p></li>
+<li><p><strong>N</strong> (<em>int</em>) – Number of realisations in the pool.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>p</strong> – Simulation pool object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Pool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.make_data">
+<span class="sig-name descname"><span class="pre">make_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cosmo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seedphase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seednoise</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_powerspectrum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_parfiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_sim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_cosmo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_sbmy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_g</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RSDs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix_mocks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfisys/hiddenbox.html#HiddenBox.make_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.make_data" title="Link to this definition"></a></dt>
+<dd><p>Generate simulated data based on the given cosmological
+parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cosmo</strong> (<em>dict</em>) – Cosmological and infrastructure parameters.</p></li>
+<li><p><strong>id</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>optional</em>) – Identifier used as a suffix in the file names. Default is
+<cite>0</cite>.</p></li>
+<li><p><strong>seedphase</strong> (<em>int</em><em> or </em><em>list</em><em> of </em><em>int</em>) – Seed to generate the initial white noise in Fourier space.</p></li>
+<li><p><strong>seednoise</strong> (<em>int</em><em> or </em><em>list</em><em> of </em><em>int</em>) – Seed to generate the noise realisation.</p></li>
+<li><p><strong>force_powerspectrum</strong> (<em>bool</em><em>, </em><em>optional</em>) – Force recomputing the input spectrum. Default is <cite>False</cite>.</p></li>
+<li><p><strong>force_parfiles</strong> (<em>bool</em><em>, </em><em>optional</em>) – Force recomputing the parameter files. Default is <cite>False</cite>.</p></li>
+<li><p><strong>force_sim</strong> (<em>bool</em><em>, </em><em>optional</em>) – Force recomputing the simulation. Default is <cite>False</cite>.</p></li>
+<li><p><strong>force_cosmo</strong> (<em>bool</em><em>, </em><em>optional</em>) – Force recomputing the cosmological parameters. Default is
+<cite>False</cite>.</p></li>
+<li><p><strong>force_phase</strong> (<em>bool</em><em>, </em><em>optional</em>) – Force recomputing the initial phase. Default is <cite>False</cite>.</p></li>
+<li><p><strong>d</strong> (<em>int</em><em>, </em><em>optional</em>) – Direction in the parameter space. Default is <cite>-1</cite>.</p></li>
+<li><p><strong>remove_sbmy</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to remove most Simbelmynë output files after use for
+disk space management. Default is <cite>True</cite>.</p></li>
+<li><p><strong>verbosity</strong> (<em>int</em><em>, </em><em>optional</em>) – Verbosity level. If <cite>None</cite>, use self.verbosity. Default is
+<cite>None</cite>.</p></li>
+<li><p><strong>return_g</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to return the full field alongside the summary.
+Default is <cite>False</cite>.</p></li>
+<li><p><strong>RSDs</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to compute the redshift-space distortions. Default
+is <cite>True</cite>.</p></li>
+<li><p><strong>prefix_mocks</strong> (<em>str</em><em>, </em><em>optional</em>) – Prefix for the mock data. If None, use self.prefix_mocks.
+Default is <cite>None</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>Phi</strong> (<em>ndarray</em>) – Vector of summary statistics.</p></li>
+<li><p><strong>g</strong> (<em>ndarray or list of ndarray or None</em>) – Observed field(s) if return_g is <cite>True</cite>; otherwise <cite>None</cite>.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.modified_selfi">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">modified_selfi</span></span><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.modified_selfi" title="Link to this definition"></a></dt>
+<dd><p>Whether to use the modified selfi.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.prefix_mocks">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prefix_mocks</span></span><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.prefix_mocks" title="Link to this definition"></a></dt>
+<dd><p>Prefix for the mocks.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.reset_survey">
+<span class="sig-name descname"><span class="pre">reset_survey</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfisys/hiddenbox.html#HiddenBox.reset_survey"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.reset_survey" title="Link to this definition"></a></dt>
+<dd><p>Re-initialise the survey mask C(n) and radial selection
+function R(r).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.setup_only">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup_only</span></span><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.setup_only" title="Link to this definition"></a></dt>
+<dd><p>Whether to only set up the hidden box.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.switch_recompute_pool">
+<span class="sig-name descname"><span class="pre">switch_recompute_pool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix_mocks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfisys/hiddenbox.html#HiddenBox.switch_recompute_pool"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.switch_recompute_pool" title="Link to this definition"></a></dt>
+<dd><p>Toggle recomputation of the pool for future <cite>compute_pool</cite>
+calls.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix_mocks</strong> (<em>str</em><em>, </em><em>optional</em>) – Prefix for the future simulation files. Default is <cite>None</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.switch_setup">
+<span class="sig-name descname"><span class="pre">switch_setup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfisys/hiddenbox.html#HiddenBox.switch_setup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.switch_setup" title="Link to this definition"></a></dt>
+<dd><p>Toggle the setup-only mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selfisys.hiddenbox.HiddenBox.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/selfisys/hiddenbox.html#HiddenBox.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#selfisys.hiddenbox.HiddenBox.update" title="Link to this definition"></a></dt>
+<dd><p>Updates the given parameter(s) of the hidden box with the
+given value(s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> (<em>dict</em>) – dictionary of parameters to update</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="SelfiSys: Assess the Impact of Systematic Effects in Galaxy Surveys" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="selfisys.normalise_hb.html" class="btn btn-neutral float-right" title="normalise_hb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Tristan Hoellinger.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

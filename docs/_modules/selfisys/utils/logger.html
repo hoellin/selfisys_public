@@ -1,0 +1,572 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selfisys.utils.logger &mdash; SelfiSys /Users/hoellinger/Library/CloudStorage/Dropbox/travail/these/science/code/SELFI/selfisys/src/ documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=75025241"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            SelfiSys
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../selfisys.hiddenbox.html">hiddenbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox"><code class="docutils literal notranslate"><span class="pre">HiddenBox</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.Npop"><code class="docutils literal notranslate"><span class="pre">HiddenBox.Npop</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.Ntimesteps"><code class="docutils literal notranslate"><span class="pre">HiddenBox.Ntimesteps</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.Psingle"><code class="docutils literal notranslate"><span class="pre">HiddenBox.Psingle</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.compute_pool"><code class="docutils literal notranslate"><span class="pre">HiddenBox.compute_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.evaluate"><code class="docutils literal notranslate"><span class="pre">HiddenBox.evaluate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.force_neglect_lightcone"><code class="docutils literal notranslate"><span class="pre">HiddenBox.force_neglect_lightcone</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.force_recompute_mocks"><code class="docutils literal notranslate"><span class="pre">HiddenBox.force_recompute_mocks</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.gravity_on"><code class="docutils literal notranslate"><span class="pre">HiddenBox.gravity_on</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.load_pool"><code class="docutils literal notranslate"><span class="pre">HiddenBox.load_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.make_data"><code class="docutils literal notranslate"><span class="pre">HiddenBox.make_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.modified_selfi"><code class="docutils literal notranslate"><span class="pre">HiddenBox.modified_selfi</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.prefix_mocks"><code class="docutils literal notranslate"><span class="pre">HiddenBox.prefix_mocks</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.reset_survey"><code class="docutils literal notranslate"><span class="pre">HiddenBox.reset_survey()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.setup_only"><code class="docutils literal notranslate"><span class="pre">HiddenBox.setup_only</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.switch_recompute_pool"><code class="docutils literal notranslate"><span class="pre">HiddenBox.switch_recompute_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.switch_setup"><code class="docutils literal notranslate"><span class="pre">HiddenBox.switch_setup()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.hiddenbox.html#selfisys.hiddenbox.HiddenBox.update"><code class="docutils literal notranslate"><span class="pre">HiddenBox.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../selfisys.normalise_hb.html">normalise_hb</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.normalise_hb.html#selfisys.normalise_hb.define_normalisation"><code class="docutils literal notranslate"><span class="pre">define_normalisation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.normalise_hb.html#selfisys.normalise_hb.worker_normalisation"><code class="docutils literal notranslate"><span class="pre">worker_normalisation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.normalise_hb.html#selfisys.normalise_hb.worker_normalisation_public"><code class="docutils literal notranslate"><span class="pre">worker_normalisation_public()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.normalise_hb.html#selfisys.normalise_hb.worker_normalisation_wrapper"><code class="docutils literal notranslate"><span class="pre">worker_normalisation_wrapper()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../selfisys.prior.html">prior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.get_summary"><code class="docutils literal notranslate"><span class="pre">get_summary()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.logposterior_hyperparameters_parallel"><code class="docutils literal notranslate"><span class="pre">logposterior_hyperparameters_parallel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.perform_prior_optimisation_and_plot"><code class="docutils literal notranslate"><span class="pre">perform_prior_optimisation_and_plot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.planck_prior"><code class="docutils literal notranslate"><span class="pre">planck_prior</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.planck_prior.mean"><code class="docutils literal notranslate"><span class="pre">planck_prior.mean</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.planck_prior.covariance"><code class="docutils literal notranslate"><span class="pre">planck_prior.covariance</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.planck_prior.inv_covariance"><code class="docutils literal notranslate"><span class="pre">planck_prior.inv_covariance</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.planck_prior.Nbin_max"><code class="docutils literal notranslate"><span class="pre">planck_prior.Nbin_max</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.planck_prior.Nbin_min"><code class="docutils literal notranslate"><span class="pre">planck_prior.Nbin_min</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.planck_prior.compute"><code class="docutils literal notranslate"><span class="pre">planck_prior.compute()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.planck_prior.load"><code class="docutils literal notranslate"><span class="pre">planck_prior.load()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.planck_prior.logpdf"><code class="docutils literal notranslate"><span class="pre">planck_prior.logpdf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.planck_prior.sample"><code class="docutils literal notranslate"><span class="pre">planck_prior.sample()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.planck_prior.save"><code class="docutils literal notranslate"><span class="pre">planck_prior.save()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.prior.html#selfisys.prior.worker_class"><code class="docutils literal notranslate"><span class="pre">worker_class()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../selfisys.selection_functions.html">selection_functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection"><code class="docutils literal notranslate"><span class="pre">LognormalSelection</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.init_selection"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.init_selection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.lognormals_z_to_x"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.lognormals_z_to_x()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.multiple_lognormal"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.multiple_lognormal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.multiple_lognormal_z"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.multiple_lognormal_z()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.one_lognormal"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.one_lognormal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.one_lognormal_z"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.one_lognormal_z()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.selection_functions.html#selfisys.selection_functions.LognormalSelection.r_grid"><code class="docutils literal notranslate"><span class="pre">LognormalSelection.r_grid()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../selfisys.selfi_interface.html">selfi_interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.selfi_interface.html#selfisys.selfi_interface.PrintMessage"><code class="docutils literal notranslate"><span class="pre">PrintMessage()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.selfi_interface.html#selfisys.selfi_interface.indent"><code class="docutils literal notranslate"><span class="pre">indent()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.selfi_interface.html#selfisys.selfi_interface.unindent"><code class="docutils literal notranslate"><span class="pre">unindent()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../selfisys.sbmy_interface.html">sbmy_interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.sbmy_interface.html#selfisys.sbmy_interface.compute_Phi"><code class="docutils literal notranslate"><span class="pre">compute_Phi()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.sbmy_interface.html#selfisys.sbmy_interface.generate_white_noise_Field"><code class="docutils literal notranslate"><span class="pre">generate_white_noise_Field()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.sbmy_interface.html#selfisys.sbmy_interface.get_power_spectrum_from_cosmo"><code class="docutils literal notranslate"><span class="pre">get_power_spectrum_from_cosmo()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.sbmy_interface.html#selfisys.sbmy_interface.handle_time_stepping"><code class="docutils literal notranslate"><span class="pre">handle_time_stepping()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.sbmy_interface.html#selfisys.sbmy_interface.setup_sbmy_parfiles"><code class="docutils literal notranslate"><span class="pre">setup_sbmy_parfiles()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../selfisys.grf.html">grf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.grf.html#selfisys.grf.primordial_grf"><code class="docutils literal notranslate"><span class="pre">primordial_grf()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../selfisys.utils.html">selfisys.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#module-selfisys.utils.examples_utils">selfisys.utils.examples_utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.examples_utils.clear_large_plot"><code class="docutils literal notranslate"><span class="pre">clear_large_plot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#module-selfisys.utils.logger">selfisys.utils.logger module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.logger.CustomLogger"><code class="docutils literal notranslate"><span class="pre">CustomLogger</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.logger.CustomLogger.diagnostic"><code class="docutils literal notranslate"><span class="pre">CustomLogger.diagnostic()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.logger.CustomLoggerHandler"><code class="docutils literal notranslate"><span class="pre">CustomLoggerHandler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.logger.CustomLoggerHandler.emit"><code class="docutils literal notranslate"><span class="pre">CustomLoggerHandler.emit()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.logger.INDENT"><code class="docutils literal notranslate"><span class="pre">INDENT()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.logger.PrintDiagnostic"><code class="docutils literal notranslate"><span class="pre">PrintDiagnostic()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.logger.PrintError"><code class="docutils literal notranslate"><span class="pre">PrintError()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.logger.PrintInfo"><code class="docutils literal notranslate"><span class="pre">PrintInfo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.logger.PrintLeftType"><code class="docutils literal notranslate"><span class="pre">PrintLeftType()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.logger.PrintWarning"><code class="docutils literal notranslate"><span class="pre">PrintWarning()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.logger.UNINDENT"><code class="docutils literal notranslate"><span class="pre">UNINDENT()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.logger.getCustomLogger"><code class="docutils literal notranslate"><span class="pre">getCustomLogger()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#module-selfisys.utils.low_level">selfisys.utils.low_level module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.low_level.stderr_redirector"><code class="docutils literal notranslate"><span class="pre">stderr_redirector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.low_level.stdout_redirector"><code class="docutils literal notranslate"><span class="pre">stdout_redirector()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#module-selfisys.utils.parser">selfisys.utils.parser module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.parser.bool_sh"><code class="docutils literal notranslate"><span class="pre">bool_sh()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.parser.check_files_exist"><code class="docutils literal notranslate"><span class="pre">check_files_exist()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.parser.intNone"><code class="docutils literal notranslate"><span class="pre">intNone()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.parser.joinstrs"><code class="docutils literal notranslate"><span class="pre">joinstrs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.parser.joinstrs_only"><code class="docutils literal notranslate"><span class="pre">joinstrs_only()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.parser.none_or_bool_or_str"><code class="docutils literal notranslate"><span class="pre">none_or_bool_or_str()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.parser.safe_npload"><code class="docutils literal notranslate"><span class="pre">safe_npload()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#module-selfisys.utils.path_utils">selfisys.utils.path_utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.path_utils.file_names_evaluate"><code class="docutils literal notranslate"><span class="pre">file_names_evaluate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.path_utils.get_file_names"><code class="docutils literal notranslate"><span class="pre">get_file_names()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#module-selfisys.utils.plot_examples">selfisys.utils.plot_examples module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_examples.plot_comoving_distance_redshift"><code class="docutils literal notranslate"><span class="pre">plot_comoving_distance_redshift()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_examples.plot_galaxy_field_slice"><code class="docutils literal notranslate"><span class="pre">plot_galaxy_field_slice()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_examples.plot_power_spectrum"><code class="docutils literal notranslate"><span class="pre">plot_power_spectrum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_examples.plot_selection_functions_def_in_z"><code class="docutils literal notranslate"><span class="pre">plot_selection_functions_def_in_z()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_examples.redshift_distance_conversion"><code class="docutils literal notranslate"><span class="pre">redshift_distance_conversion()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_examples.relative_error_analysis"><code class="docutils literal notranslate"><span class="pre">relative_error_analysis()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#module-selfisys.utils.plot_params">selfisys.utils.plot_params module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_params.ScalarFormatterForceFormat_11"><code class="docutils literal notranslate"><span class="pre">ScalarFormatterForceFormat_11</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_params.ScalarFormatterForceFormat_11.get_offset"><code class="docutils literal notranslate"><span class="pre">ScalarFormatterForceFormat_11.get_offset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_params.ScalarFormatterForceFormat_11.set_scientific"><code class="docutils literal notranslate"><span class="pre">ScalarFormatterForceFormat_11.set_scientific()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_params.ScalarFormatterForceFormat_11.set_useOffset"><code class="docutils literal notranslate"><span class="pre">ScalarFormatterForceFormat_11.set_useOffset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_params.create_all_colormaps"><code class="docutils literal notranslate"><span class="pre">create_all_colormaps()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_params.create_colormap"><code class="docutils literal notranslate"><span class="pre">create_colormap()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_params.dynamic_text_scaling"><code class="docutils literal notranslate"><span class="pre">dynamic_text_scaling()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_params.get_contours"><code class="docutils literal notranslate"><span class="pre">get_contours()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_params.reset_plotting"><code class="docutils literal notranslate"><span class="pre">reset_plotting()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_params.setup_plotting"><code class="docutils literal notranslate"><span class="pre">setup_plotting()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#module-selfisys.utils.plot_utils">selfisys.utils.plot_utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_utils.plot_C"><code class="docutils literal notranslate"><span class="pre">plot_C()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_utils.plot_fisher"><code class="docutils literal notranslate"><span class="pre">plot_fisher()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_utils.plot_gradients"><code class="docutils literal notranslate"><span class="pre">plot_gradients()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_utils.plot_histogram"><code class="docutils literal notranslate"><span class="pre">plot_histogram()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_utils.plot_mocks"><code class="docutils literal notranslate"><span class="pre">plot_mocks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_utils.plot_mocks_compact"><code class="docutils literal notranslate"><span class="pre">plot_mocks_compact()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_utils.plot_observations"><code class="docutils literal notranslate"><span class="pre">plot_observations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_utils.plot_prior_and_posterior_covariances"><code class="docutils literal notranslate"><span class="pre">plot_prior_and_posterior_covariances()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_utils.plot_reconstruction"><code class="docutils literal notranslate"><span class="pre">plot_reconstruction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_utils.plot_selection_functions"><code class="docutils literal notranslate"><span class="pre">plot_selection_functions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.plot_utils.plotly_3d"><code class="docutils literal notranslate"><span class="pre">plotly_3d()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#module-selfisys.utils.timestepping">selfisys.utils.timestepping module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.timestepping.merge_nTS"><code class="docutils literal notranslate"><span class="pre">merge_nTS()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#module-selfisys.utils.tools">selfisys.utils.tools module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.tools.cosmo_vector_to_Simbelmyne_dict"><code class="docutils literal notranslate"><span class="pre">cosmo_vector_to_Simbelmyne_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.tools.cosmo_vector_to_class_dict"><code class="docutils literal notranslate"><span class="pre">cosmo_vector_to_class_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.tools.custom_stat"><code class="docutils literal notranslate"><span class="pre">custom_stat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.tools.fisher_rao"><code class="docutils literal notranslate"><span class="pre">fisher_rao()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.tools.get_k_max"><code class="docutils literal notranslate"><span class="pre">get_k_max()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.tools.get_summary"><code class="docutils literal notranslate"><span class="pre">get_summary()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.tools.none_or_bool_or_str"><code class="docutils literal notranslate"><span class="pre">none_or_bool_or_str()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.tools.params_ids_to_Simbelmyne_dict"><code class="docutils literal notranslate"><span class="pre">params_ids_to_Simbelmyne_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.tools.sample_omega_from_prior"><code class="docutils literal notranslate"><span class="pre">sample_omega_from_prior()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.tools.summary_to_score"><code class="docutils literal notranslate"><span class="pre">summary_to_score()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#module-selfisys.utils.workers">selfisys.utils.workers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.workers.Simbelmyne_worker"><code class="docutils literal notranslate"><span class="pre">Simbelmyne_worker()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.workers.evaluate_gradient_of_Symbelmyne"><code class="docutils literal notranslate"><span class="pre">evaluate_gradient_of_Symbelmyne()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../selfisys.utils.html#selfisys.utils.workers.worker_gradient_Symbelmyne"><code class="docutils literal notranslate"><span class="pre">worker_gradient_Symbelmyne()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../selfisys.utils.html#module-selfisys.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contribute</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contributing to SelfiSys</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../CONTRIBUTING.html#reporting-issues">Reporting Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../CONTRIBUTING.html#submitting-contributions">Submitting Contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../CONTRIBUTING.html#style-guidelines">Style Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../CONTRIBUTING.html#python-code">Python code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../CONTRIBUTING.html#jupyter-notebooks">Jupyter Notebooks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../CONTRIBUTING.html#questions">Questions?</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../REFERENCES.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">SelfiSys</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">selfisys.utils.logger</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for selfisys.utils.logger</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># ----------------------------------------------------------------------</span>
+<span class="c1"># Copyright (C) 2024 Tristan Hoellinger</span>
+<span class="c1"># Distributed under the GNU General Public License v3.0 (GPLv3).</span>
+<span class="c1"># See the LICENSE file in the root directory for details.</span>
+<span class="c1"># SPDX-License-Identifier: GPL-3.0-or-later</span>
+<span class="c1"># ----------------------------------------------------------------------</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Tristan Hoellinger&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;0.1.0&quot;</span>
+<span class="n">__date__</span> <span class="o">=</span> <span class="s2">&quot;2024&quot;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;GPLv3&quot;</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Logger routines for the SelfiSys package.</span>
+
+<span class="sd">The printing routines and colours are adapted from the Simbelmynë</span>
+<span class="sd">comological solver (https://simbelmyne.readthedocs.io/en/latest).</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">cast</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">selfisys</span> <span class="kn">import</span> <span class="n">DEFAULT_VERBOSE_LEVEL</span>
+
+<span class="c1"># Global variables for fonts</span>
+<span class="n">FONT_BOLDRED</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[1;31m&quot;</span>
+<span class="n">FONT_BOLDGREEN</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[1;32m&quot;</span>
+<span class="n">FONT_BOLDYELLOW</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[1;33m&quot;</span>
+<span class="n">FONT_BOLDCYAN</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[1;36m&quot;</span>
+<span class="n">FONT_BOLDGREY</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[1;37m&quot;</span>
+<span class="n">FONT_LIGHTPURPLE</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[38;5;147m&quot;</span>
+
+<span class="n">FONT_NORMAL</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[00m&quot;</span>
+
+<span class="c1"># Global variables for verbosity</span>
+<span class="n">ERROR_VERBOSITY</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">INFO_VERBOSITY</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">WARNING_VERBOSITY</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">DIAGNOSTIC_VERBOSITY</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">DEBUG_VERBOSITY</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">DIAGNOSTIC_LEVEL</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">addLevelName</span><span class="p">(</span><span class="n">DIAGNOSTIC_LEVEL</span><span class="p">,</span> <span class="s2">&quot;DIAGNOSTIC&quot;</span><span class="p">)</span>
+
+<span class="n">G__ind__</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Global variable for logger indentation</span>
+
+
+<div class="viewcode-block" id="INDENT">
+<a class="viewcode-back" href="../../../selfisys.utils.html#selfisys.utils.logger.INDENT">[docs]</a>
+<span class="k">def</span> <span class="nf">INDENT</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Indents the current level of outputs.&quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">G__ind__</span>
+    <span class="n">G__ind__</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">G__ind__</span></div>
+
+
+
+<div class="viewcode-block" id="UNINDENT">
+<a class="viewcode-back" href="../../../selfisys.utils.html#selfisys.utils.logger.UNINDENT">[docs]</a>
+<span class="k">def</span> <span class="nf">UNINDENT</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Unindents the current level of outputs.&quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">G__ind__</span>
+    <span class="n">G__ind__</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">G__ind__</span></div>
+
+
+
+<div class="viewcode-block" id="PrintLeftType">
+<a class="viewcode-back" href="../../../selfisys.utils.html#selfisys.utils.logger.PrintLeftType">[docs]</a>
+<span class="k">def</span> <span class="nf">PrintLeftType</span><span class="p">(</span><span class="n">message_type</span><span class="p">,</span> <span class="n">FONT_COLOR</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Prints the type of output to screen.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    message_type (string) : type of message</span>
+<span class="sd">    FONT_COLOR (string) : font color for this type of message</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">localtime</span><span class="p">,</span> <span class="n">strftime</span>
+
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+        <span class="s2">&quot;[&quot;</span>
+        <span class="o">+</span> <span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M:%S&quot;</span><span class="p">,</span> <span class="n">localtime</span><span class="p">())</span>
+        <span class="o">+</span> <span class="s2">&quot;|&quot;</span>
+        <span class="o">+</span> <span class="n">FONT_COLOR</span>
+        <span class="o">+</span> <span class="n">message_type</span>
+        <span class="o">+</span> <span class="n">FONT_NORMAL</span>
+        <span class="o">+</span> <span class="s2">&quot;]&quot;</span>
+    <span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;==&quot;</span> <span class="o">*</span> <span class="n">G__ind__</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="PrintInfo">
+<a class="viewcode-back" href="../../../selfisys.utils.html#selfisys.utils.logger.PrintInfo">[docs]</a>
+<span class="k">def</span> <span class="nf">PrintInfo</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Prints an information to screen.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    message (string) : message</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">DEFAULT_VERBOSE_LEVEL</span> <span class="o">&gt;=</span> <span class="n">INFO_VERBOSITY</span><span class="p">:</span>
+        <span class="n">PrintLeftType</span><span class="p">(</span><span class="s2">&quot;INFO      &quot;</span><span class="p">,</span> <span class="n">FONT_BOLDCYAN</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="PrintDiagnostic">
+<a class="viewcode-back" href="../../../selfisys.utils.html#selfisys.utils.logger.PrintDiagnostic">[docs]</a>
+<span class="k">def</span> <span class="nf">PrintDiagnostic</span><span class="p">(</span><span class="n">verbosity</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Prints a diagnostic to screen.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    verbosity (int) : verbosity of the message</span>
+<span class="sd">    message (string) : message</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">DEFAULT_VERBOSE_LEVEL</span> <span class="o">&gt;=</span> <span class="n">verbosity</span><span class="p">:</span>
+        <span class="n">PrintLeftType</span><span class="p">(</span><span class="s2">&quot;DIAGNOSTIC&quot;</span><span class="p">,</span> <span class="n">FONT_BOLDGREY</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">message</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="PrintWarning">
+<a class="viewcode-back" href="../../../selfisys.utils.html#selfisys.utils.logger.PrintWarning">[docs]</a>
+<span class="k">def</span> <span class="nf">PrintWarning</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Prints a warning to screen.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    message (string) : message</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">DEFAULT_VERBOSE_LEVEL</span> <span class="o">&gt;=</span> <span class="n">WARNING_VERBOSITY</span><span class="p">:</span>
+        <span class="n">PrintLeftType</span><span class="p">(</span><span class="s2">&quot;WARNING   &quot;</span><span class="p">,</span> <span class="n">FONT_BOLDYELLOW</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">FONT_BOLDYELLOW</span> <span class="o">+</span> <span class="n">message</span> <span class="o">+</span> <span class="n">FONT_NORMAL</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="PrintError">
+<a class="viewcode-back" href="../../../selfisys.utils.html#selfisys.utils.logger.PrintError">[docs]</a>
+<span class="k">def</span> <span class="nf">PrintError</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Prints an error to screen.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    message (string) : message</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">DEFAULT_VERBOSE_LEVEL</span> <span class="o">&gt;=</span> <span class="n">ERROR_VERBOSITY</span><span class="p">:</span>
+        <span class="n">PrintLeftType</span><span class="p">(</span><span class="s2">&quot;ERROR     &quot;</span><span class="p">,</span> <span class="n">FONT_BOLDRED</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">FONT_BOLDRED</span> <span class="o">+</span> <span class="n">message</span> <span class="o">+</span> <span class="n">FONT_NORMAL</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="CustomLoggerHandler">
+<a class="viewcode-back" href="../../../selfisys.utils.html#selfisys.utils.logger.CustomLoggerHandler">[docs]</a>
+<span class="k">class</span> <span class="nc">CustomLoggerHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Handler</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Custom logging handler to redirect Python logger messages to custom</span>
+<span class="sd">    print functions, with support for verbosity levels in debug</span>
+<span class="sd">    messages.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="CustomLoggerHandler.emit">
+<a class="viewcode-back" href="../../../selfisys.utils.html#selfisys.utils.logger.CustomLoggerHandler.emit">[docs]</a>
+    <span class="k">def</span> <span class="nf">emit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Emit a log record.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">log_message</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+            <span class="n">log_level</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">levelno</span>
+
+            <span class="k">if</span> <span class="n">log_level</span> <span class="o">&gt;=</span> <span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">:</span>
+                <span class="n">PrintError</span><span class="p">(</span><span class="n">log_message</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">log_level</span> <span class="o">&gt;=</span> <span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">:</span>
+                <span class="n">PrintWarning</span><span class="p">(</span><span class="n">log_message</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">log_level</span> <span class="o">&gt;=</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">:</span>
+                <span class="n">PrintInfo</span><span class="p">(</span><span class="n">log_message</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">log_level</span> <span class="o">==</span> <span class="n">DIAGNOSTIC_LEVEL</span><span class="p">:</span>
+                <span class="c1"># Retrieve verbosity level from the record</span>
+                <span class="n">verbosity</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">record</span><span class="p">,</span> <span class="s2">&quot;verbosity&quot;</span><span class="p">,</span> <span class="n">DIAGNOSTIC_VERBOSITY</span><span class="p">)</span>
+                <span class="n">PrintDiagnostic</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="n">verbosity</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">log_message</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">log_level</span> <span class="o">&gt;=</span> <span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
+                <span class="n">PrintDiagnostic</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="n">DEBUG_VERBOSITY</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">log_message</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Fallback for other levels</span>
+                <span class="n">PrintInfo</span><span class="p">(</span><span class="n">log_message</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">handleError</span><span class="p">(</span><span class="n">record</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="CustomLogger">
+<a class="viewcode-back" href="../../../selfisys.utils.html#selfisys.utils.logger.CustomLogger">[docs]</a>
+<span class="k">class</span> <span class="nc">CustomLogger</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Logger</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Custom logger class supporting custom verbosity levels in diagnostic</span>
+<span class="sd">    messages.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="CustomLogger.diagnostic">
+<a class="viewcode-back" href="../../../selfisys.utils.html#selfisys.utils.logger.CustomLogger.diagnostic">[docs]</a>
+    <span class="k">def</span> <span class="nf">diagnostic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">verbosity</span><span class="o">=</span><span class="n">DIAGNOSTIC_VERBOSITY</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Log a message with DIAGNOSTIC level.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        msg : str</span>
+<span class="sd">            The message to log.</span>
+<span class="sd">        verbosity : int, optional</span>
+<span class="sd">            The verbosity level required to log this message.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isEnabledFor</span><span class="p">(</span><span class="n">DIAGNOSTIC_LEVEL</span><span class="p">):</span>
+            <span class="c1"># Pass verbosity as part of the extra argument</span>
+            <span class="n">extra</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extra&quot;</span><span class="p">,</span> <span class="p">{})</span>
+            <span class="n">extra</span><span class="p">[</span><span class="s2">&quot;verbosity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">verbosity</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;extra&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">extra</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">DIAGNOSTIC_LEVEL</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</div>
+
+
+
+<span class="n">logging</span><span class="o">.</span><span class="n">setLoggerClass</span><span class="p">(</span><span class="n">CustomLogger</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="getCustomLogger">
+<a class="viewcode-back" href="../../../selfisys.utils.html#selfisys.utils.logger.getCustomLogger">[docs]</a>
+<span class="k">def</span> <span class="nf">getCustomLogger</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CustomLogger</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get as CustomLogger instance to use the custom printing routines.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name : str</span>
+<span class="sd">        The name of the logger.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    logger : logging.Logger</span>
+<span class="sd">        The custom logger instance.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">setLoggerClass</span><span class="p">(</span><span class="n">CustomLogger</span><span class="p">)</span>
+    <span class="n">logger</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">CustomLogger</span><span class="p">,</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>  <span class="c1"># cast for type checkers and PyLance</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>  <span class="c1"># Set the desired base logging level</span>
+
+    <span class="n">handler</span> <span class="o">=</span> <span class="n">CustomLoggerHandler</span><span class="p">()</span>
+    <span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">FONT_LIGHTPURPLE</span><span class="si">}</span><span class="s2">(%(name)s)</span><span class="si">{</span><span class="n">FONT_NORMAL</span><span class="si">}</span><span class="s2"> %(message)s&quot;</span><span class="p">)</span>
+    <span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+
+    <span class="c1"># Attach the handler to the logger if not already present</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">logger</span><span class="o">.</span><span class="n">handlers</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">logger</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Tristan Hoellinger.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
